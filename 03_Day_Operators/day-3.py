@@ -122,3 +122,37 @@ print(not True)      # False - Negation, the not operator turns true to false
 print(not False)     # True
 print(not not True)  # True
 print(not not False) # False
+
+
+def area_of_square(base,height):
+    return 0.5*(base*height)
+
+def perimeter_of_triangle(a,b,c):
+    return a+b+c
+def weekly_earning(hour,rate):
+ return hour*rate
+def past_life(years):
+   return years*365*24*60*60
+def seconds_to_live(years):
+   return 3153600000-years*365*24*60*60
+def main():
+    base=int(input("Enter base: "))
+    height=int(input("Enter height: "))
+    square=area_of_square(base,height)
+    print("The area of the triangle is",square)
+    a=int(input("Enter side a: "))
+    b=int(input("Enter side b: "))
+    c=int(input("Enter side c: "))
+    perimeter=perimeter_of_triangle(a,b,c)
+    print("The perimeter of the triangle is",perimeter)
+    hour=int(input("Enter hours: "))
+    rate=int(input('Enter rate per hour: '))
+    print("Your weekly earning is",weekly_earning(hour,rate))
+    years=int(input("Enter number of years you have lived: "))
+    print(f'You have lived for {past_life(years)} seconds.')
+    print(f'You have {seconds_to_live(years)} seconds ahead of you.')
+    print(f'1 1 1 1 1\n2 1 2 4 8\n3 1 3 9 27\n4 1 4 16 64\n5 1 5 25 125')
+
+
+if __name__ == "__main__":
+    main()
